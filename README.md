@@ -8,25 +8,15 @@ The **Prompt Search Engine** is an application that allows users to input a quer
 - Computes cosine similarity to find the top `n` most similar prompts.
 - Provides a FastAPI-based API for backend.
 - Includes a user-friendly frontend built with Streamlit.
+- 
+In this example, we serve an sentence-transformers model using FastAPI for the backend service and streamlit for the frontend service.
+docker compose orchestrates the two services and allows communication between them.
+To run the example in a machine running Docker and docker compose, run:
 
-  ##Code structure
-  prompt_search_engine_project/
-│
-├── app/
-│   ├── __init__.py
-│   ├── vectorizer.py
-│   ├── cosine_similarity.py
-│   ├── search_engine.py
-│
-├── tests/
-│   ├── __init__.py
-│   ├── test_vectorizer.py
-│   ├── test_cosine_similarity.py
-│   ├── test_search_engine.py
-│
-├── run.py
-├── requirements.txt
-├── Dockerfile
-├── README.md
-├── streamlit_app.py
+```bash
 
+docker compose build
+docker compose up
+```
+
+Playground.py is toy example of how prompt search engine works.
