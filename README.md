@@ -8,7 +8,7 @@ The **Prompt Search Engine** is an application that allows users to input a quer
 - Computes cosine similarity to find the top `n` most similar prompts.
 - Provides a FastAPI-based API for backend.
 - Includes a user-friendly frontend built with Streamlit.
-- 
+  
 In this example, we serve an sentence-transformers model using FastAPI for the backend service and streamlit for the frontend service.
 docker compose orchestrates the two services and allows communication between them.
 To run the example in a machine running Docker and docker compose, run:
