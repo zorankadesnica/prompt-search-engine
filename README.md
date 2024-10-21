@@ -6,5 +6,5 @@ The **Prompt Search Engine** is an application that allows users to input a quer
 ## Features
 - Vectorizes input prompts and dataset prompts using SBERT.
 - Computes cosine similarity to find the top `n` most similar prompts.
-- Provides a FastAPI-based API for programmatic access.
-- Includes a user-friendly interface built with Streamlit.
+- Provides a FastAPI-based API for backend.
+- Includes a user-friendly frontend built with Streamlit.
