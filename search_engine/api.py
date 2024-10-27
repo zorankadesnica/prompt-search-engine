@@ -2,19 +2,23 @@ from fastapi import FastAPI, HTTPException
 from pydantic import BaseModel
 from typing import List, Tuple
 from prompt_search_engine import PromptSearchEngine
+from data_utils import load_prompts_data
 
 # Initialize FastAPI app
 app = FastAPI()
 
-# Sample corpus of prompts (can be replaced with a larger dataset)
+# Number of prompts in corpus :
+"""
 prompts = [
-    "What is artificial intelligence?",
-    "How does machine learning work?",
-    "Tell me about neural networks.",
-    "Explain the concept of deep learning.",
-    "What is AI used for?"
+    'What is artificial intelligence?',
+    'How does machine learning work?',
+    'Tell me about neural networks.',
+    'Explain the concept of deep learning.',
+    'What is AI used for?'
 ]
-
+"""
+n_of_prompts_corpus=2000
+prompts=load_prompts_data(n_of_prompts_corpus)
 # Initialize the PromptSearchEngine with a default model and prompt dataset
 search_engine = PromptSearchEngine(prompts=prompts, model='paraphrase-MiniLM-L6-v2')
 
