@@ -22,9 +22,7 @@ class Vectorizer:
 
         Returns:
             numpy.ndarray: The numerical vector representation of the prompt.
-        """
-        if not prompt:
-            raise ValueError("The textual prompt is empty.")
+            """
         return self.model.encode(prompt)
 
 
@@ -49,14 +47,12 @@ def cosine_similarity(
     if not isinstance(corpus_vectors, np.ndarray):
         raise ValueError("corpus_vectors must be a numpy array.")
 
-
     # Check for NaN or Inf values
     if np.isnan(query_vector).any() or np.isinf(query_vector).any():
         raise ValueError("query_vector contains NaN or Inf values.")
 
     if np.isnan(corpus_vectors).any() or np.isinf(corpus_vectors).any():
         raise ValueError("corpus_vectors contains NaN or Inf values.")
-
 
     # Normalize the query vector and corpus vectors to unit vectors
     query_norm = np.linalg.norm(query_vector)
