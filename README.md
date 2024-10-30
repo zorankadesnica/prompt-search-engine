@@ -12,7 +12,7 @@ The **Prompt Search Engine** is an application that allows users to input a quer
   
 In this example, we serve an sentence-transformers model using FastAPI for the backend service and streamlit for the frontend service.
 Docker compose orchestrates the two services and allows communication between them.
-## Run it loccaly
+## Run it locally
 To run the example in a machine running Docker and docker compose, do following steps:
 
 1. Clone the repository:
@@ -46,3 +46,7 @@ docker compose up
 ```
 6. Open  [localhost:8501](https://localhost:8501) on your browser and you can play with your personal prompts for stable diffusion and see how similar they are with corpus prompts.
 Playground.py is toy example of how prompt search engine works.
+
+## Next steps
+1. Expose url path to dataset in docker image 
+2. Dockerize tests
