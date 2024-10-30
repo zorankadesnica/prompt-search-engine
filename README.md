@@ -1,8 +1,9 @@
 # Prompt Search Engine
 
-## Overview
 ![Example query prompt](images/corgi.png)
+
 The **Prompt Search Engine** is an application that allows users to input a query prompt and retrieve the top `n` most similar prompts from a dataset. It uses **Sentence-BERT (SBERT)** for vectorizing prompts and **cosine similarity** to compute prompt similarity.The use case is for Stable Diffusion- search engine  assists in generating better prompts by leveraging a database of existing prompts.These prompts significantly impact the quality and relevance of the generated images.
+
 ## Features
 - Vectorizes input prompts and dataset prompts using SBERT.
 - Computes cosine similarity to find the top `n` most similar prompts.
