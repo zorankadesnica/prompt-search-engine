@@ -1,7 +1,7 @@
-fastapi==0.115.2
-uvicorn== 0.32.0
-sentence-transformers==3.2.0
+fastapi==0.115.3
 numpy==2.1.2
-datasets==3.0.1
-streamlit==1.22
-requests==2.32.2
+pandas==2.2.3
+pydantic==2.9.2
+sentence_transformers==3.2.0
+pyarrow==17.0.0
+fastparquet==2024.5.0
