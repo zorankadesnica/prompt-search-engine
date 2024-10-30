@@ -25,7 +25,9 @@ To run the example in a machine running Docker and docker compose, do following 
 cd prompt-search-engine-sd
 ```
 3. Create a virtual environment:
+```bash
 python -m venv venv
+```
 
 4. Activate the virtual environment:
 
@@ -42,5 +44,5 @@ source venv/bin/activate
 docker compose build
 docker compose up
 ```
-6. Open  [localhost:8501](localhost:8501) on your browser and you can play with your personal prompts for stable diffusion and see how similar they are with corpus prompts.
+6. Open  [localhost:8501](https://localhost:8501) on your browser and you can play with your personal prompts for stable diffusion and see how similar they are with corpus prompts.
 Playground.py is toy example of how prompt search engine works.
