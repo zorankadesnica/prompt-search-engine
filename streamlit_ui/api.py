@@ -2,9 +2,9 @@ import streamlit as st
 import requests
 
 # Define the backend API endpoint
-API_URL = 'http://localhost:8000/search' 
+API_URL = 'http://backend:8000/search' 
 
-st.set_page_config(page_title="Promp search engine")
+st.set_page_config(page_title="Prompt search engine")
 st.title("Prompt Search Engine")
 
 # Input form
