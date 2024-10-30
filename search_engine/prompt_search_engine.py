@@ -1,7 +1,6 @@
 import numpy as np
 from sentence_transformers import SentenceTransformer
 from typing import Sequence, List, Tuple
-import pickle
 
 class Vectorizer:
     def __init__(self, model: str) -> None:
