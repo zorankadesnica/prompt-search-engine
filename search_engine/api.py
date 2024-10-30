@@ -7,19 +7,14 @@ from data_utils import load_prompts_data
 # Initialize FastAPI app
 app = FastAPI()
 
-# Number of prompts in corpus :
-"""
-prompts = [
-    'What is artificial intelligence?',
-    'How does machine learning work?',
-    'Tell me about neural networks.',
-    'Explain the concept of deep learning.',
-    'What is AI used for?'
-]
-"""
-n_of_prompts_corpus=2000
-prompts=load_prompts_data(n_of_prompts_corpus)
-# Initialize the PromptSearchEngine with a default model and prompt dataset
+# Number of prompts in corpus 
+n_of_prompts_corpus=1000
+
+#load prompts in corpus:
+url = f'https://huggingface.co/datasets/poloclub/diffusiondb/resolve/main/metadata.parquet'
+prompts=load_prompts_data(url,n_of_prompts_corpus)
+
+# Initialize the PromptSearchEngine with a default model and prompt dataset 
 search_engine = PromptSearchEngine(prompts=prompts, model='paraphrase-MiniLM-L6-v2')
 
 # Pydantic model to define the structure of input
