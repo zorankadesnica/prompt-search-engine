@@ -19,9 +19,10 @@ def test_prompt_search_engine():
     search_engine = PromptSearchEngine(prompts, model="paraphrase-MiniLM-L6-v2")
     
     results = search_engine.most_similar("What is AI?", n=2)
+    allowed_types = (float, np.float32, np.float64)
     
     assert len(results) == 2, "There should be 2 results"
-    assert all(isinstance(score, float) for score, _ in results), "All scores should be floats"
+    assert all(isinstance(score, allowed_types) for score, _ in results), "All scores should be floats"
     
 def test_vectorizer():
     model = "paraphrase-MiniLM-L6-v2"

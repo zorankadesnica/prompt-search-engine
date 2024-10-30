@@ -2,6 +2,7 @@ from fastapi.testclient import TestClient
 from search_engine.api import app
 
 client = TestClient(app)
+
 def test_search_similar_prompts():
     response = client.post(
         "/search/",
@@ -11,7 +12,6 @@ def test_search_similar_prompts():
         }
     )
     assert response.status_code == 200
-    print( response.status_code)
     data = response.json()
     assert isinstance(data, list)
     assert len(data) == 3
